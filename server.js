@@ -1,6 +1,7 @@
 const express = require('express')
 const connection = require('./database/connection')
 const moviesRouters = require("./routes/moviesRoutes")
+const notFound = require("./middlewares/notFound")
 
 
 const app = express()
@@ -21,3 +22,4 @@ app.get('/', (req, res) => {
 app.use('/movies', moviesRouters)
 
 
+app.use(notFound)
