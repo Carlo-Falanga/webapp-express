@@ -2,6 +2,7 @@ const express = require('express')
 const connection = require('./database/connection')
 const moviesRouters = require("./routes/moviesRoutes")
 const notFound = require("./middlewares/notFound")
+const serverError = require("./middlewares/serverError")
 
 
 const app = express()
@@ -19,7 +20,12 @@ app.get('/', (req, res) => {
   res.send('WebApp Server Home Page')
 })
 
+// Movies routes
 app.use('/movies', moviesRouters)
 
 
+// 404 middleware
 app.use(notFound)
+
+// 500 middleware
+app.use(serverError)
