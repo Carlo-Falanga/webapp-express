@@ -10,6 +10,7 @@ const PORT = process.env.PORT || 3000
 
 app.use(express.json())
 
+app.use(cors())
 
 app.listen(PORT, () => {
   console.log(`Example app listening on port http://localhost:${PORT}`)
