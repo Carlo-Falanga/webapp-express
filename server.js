@@ -3,6 +3,7 @@ const connection = require('./database/connection')
 const moviesRouters = require("./routes/moviesRoutes")
 const notFound = require("./middlewares/notFound")
 const serverError = require("./middlewares/serverError")
+const cors = require("cors")
 
 
 const app = express()
