@@ -8,5 +8,8 @@ router.get('/', moviesControllers.index);
 // show
 router.get('/:id', moviesControllers.show);
 
+// store
+router.post('/:id/reviews', moviesControllers.storeReview)
+
 
 module.exports = router

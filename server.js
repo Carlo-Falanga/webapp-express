@@ -11,6 +11,7 @@ const PORT = process.env.PORT || 3000
 
 app.use(express.json())
 
+
 app.use(cors())
 
 app.listen(PORT, () => {
@@ -24,6 +25,8 @@ app.get('/', (req, res) => {
 
 // Movies routes
 app.use('/movies', moviesRouters)
+
+
 
 
 // 404 middleware
